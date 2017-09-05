@@ -19,8 +19,8 @@ function list() {
     this.end = end; //将列表的当前位置移动到最后一个元素
     this.prev = prev; //将当前位置后移一位
     this.next = next; //将当前位置前移一位
-    this.hasNext = hasNext; //判断是否是最后一位
-    this.hasPrev = hasPrev; //判断是否是第一位
+    this.hasNext = hasNext; //判断当前位置后面是否还有元素
+    this.hasPrev = hasPrev; //判断当前位置前面是否还有元素
     this.currPos = currPos; //返回列表当前位置
     this.moveTo = moveTo; //将当前位置移动到指定位置
 
@@ -95,11 +95,11 @@ function list() {
     }
 
     function hasNext() {
-        return this.pos == this.listSize;
+        return this.pos < this.listSize;
     }
 
     function hasPrev() {
-        return this.pos == 0;
+        return this.pos >= 0;
     }
 
     function currPos() {
