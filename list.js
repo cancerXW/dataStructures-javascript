@@ -83,9 +83,7 @@ function list() {
     }
 
     function prev() {
-        if (this.pos > 0) {
-            this.pos--;
-        }
+        this.pos--;
     }
 
     function next() {
