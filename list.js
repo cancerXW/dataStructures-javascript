@@ -49,8 +49,8 @@ function list() {
         return this.dataStore.toString();
     }
 
-    function getElement(element) {
-        return this.dataStore[element];
+    function getElement() {
+        return this.dataStore[this.pos];
     }
 
     function insert(element, after) {
