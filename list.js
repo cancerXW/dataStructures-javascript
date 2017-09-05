@@ -99,7 +99,7 @@ function list() {
     }
 
     function hasPrev() {
-        return this.pos >= 0;
+        return this.pos > 0;
     }
 
     function currPos() {
